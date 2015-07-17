@@ -6,13 +6,20 @@
 //  Copyright (c) 2015 Big Nerd Ranch. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PhotosViewController.h"
+#import "PhotoStore.h"
 
-@interface ViewController ()
+@interface PhotosViewController ()
 
 @end
 
-@implementation ViewController
+@implementation PhotosViewController
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.photoStore fetchRecentPhotos];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

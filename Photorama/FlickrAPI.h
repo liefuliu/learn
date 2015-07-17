@@ -1,15 +1,15 @@
 //
-//  ViewController.h
+//  FlickrAPI.h
 //  Photorama
 //
 //  Created by liefuliu on 7/16/15.
 //  Copyright (c) 2015 Big Nerd Ranch. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ViewController : UIViewController
+@interface FlickrAPI : NSObject
 
++ (NSURL*) recentPhotosURL;
 
 @end
-
