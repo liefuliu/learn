@@ -11,5 +11,6 @@
 @interface FlickrAPI : NSObject
 
 + (NSURL*) recentPhotosURL;
++ (NSArray*) photosFromJSONData:(NSData*) data;
 
 @end

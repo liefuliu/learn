@@ -8,6 +8,7 @@
 
 #import "PhotoStore.h"
 #import "FlickrAPI.h"
+#import "Photo.h"
 
 @interface PhotoStore ()
 @property (strong, nonatomic) NSURLSession* session;
@@ -25,7 +26,7 @@
     return self;
 }
 
-- (void) fetchRecentPhotos {
+- (void) fetchRecentPhotosWithCompletion:(void(^)(NSArray*)) completetion {
     NSLog(@"fetchRecentPhotos began");
     
     NSURL *url = [FlickrAPI recentPhotosURL];
@@ -36,15 +37,46 @@
     NSURLSessionDataTask *task = [self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
         NSLog(@"completionHandler block began");
+        NSArray *photos = nil;
         if (data != nil) {
-            NSLog(@"Successfully fetch the data. Parsing the data now...");
-            NSLog(@"data:%@",data);
-            NSString* jsonString =
-            [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"Json string: %@", jsonString);
+            photos = [FlickrAPI photosFromJSONData:data];
+            NSLog(@"photos:%@", photos);
         } else {
             NSLog(@"Failed to fetch data. Error: %@", error.localizedDescription);
         }
+        
+        if (completetion) {
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                completetion(photos);
+            }];
+        }
+    }];
+    [task resume];
+}
+
+
+- (void) fetchImageForPhoto:(Photo*)photo completion:(void(^)(UIImage*)) completion {
+    NSURLRequest *request = [NSURLRequest requestWithURL:photo.URL];
+    
+    NSURLSessionDownloadTask *task =
+    [self.session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+        NSLog(@"fetchImageForPhoto. URL:%@", location);
+        UIImage *image = nil;
+        if (location != nil) {
+            NSData * imageData = [NSData dataWithContentsOfURL: location];
+            image = [UIImage imageWithData: imageData];
+            photo.image = image;
+        } else {
+            NSLog(@"Failed to download image at :%@: %@",
+                  photo.URL, error.localizedDescription);
+        }
+        
+        if (completion) {
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                completion(image);
+            }];
+        }
+        
     }];
     [task resume];
 }

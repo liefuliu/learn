@@ -18,7 +18,13 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self.photoStore fetchRecentPhotos];
+    [self.photoStore fetchRecentPhotosWithCompletion:^(NSArray *photos) {
+        NSLog(@"Found %lu photos", (unsigned long) photos.count);
+        
+        [self.photoStore fetchImageForPhoto:photos.firstObject completion:^(UIImage* image) {
+            self.imageView.image = image;
+        }];
+    }];
 }
 
 - (void)viewDidLoad {

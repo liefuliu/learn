@@ -16,6 +16,7 @@
 		6D6C4F8C1B587623005558A4 /* PhotoramaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C4F8B1B587623005558A4 /* PhotoramaTests.m */; };
 		6D6C4F971B587B26005558A4 /* FlickrAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C4F961B587B26005558A4 /* FlickrAPI.m */; };
 		6D6C4F9A1B5885B3005558A4 /* PhotoStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C4F991B5885B3005558A4 /* PhotoStore.m */; };
+		6D6C4F9D1B59505B005558A4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C4F9C1B59505B005558A4 /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		6D6C4F961B587B26005558A4 /* FlickrAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrAPI.m; sourceTree = "<group>"; };
 		6D6C4F981B5885B3005558A4 /* PhotoStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoStore.h; sourceTree = "<group>"; };
 		6D6C4F991B5885B3005558A4 /* PhotoStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoStore.m; sourceTree = "<group>"; };
+		6D6C4F9B1B59505B005558A4 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		6D6C4F9C1B59505B005558A4 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				6D6C4F961B587B26005558A4 /* FlickrAPI.m */,
 				6D6C4F981B5885B3005558A4 /* PhotoStore.h */,
 				6D6C4F991B5885B3005558A4 /* PhotoStore.m */,
+				6D6C4F9B1B59505B005558A4 /* Photo.h */,
+				6D6C4F9C1B59505B005558A4 /* Photo.m */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D6C4F9D1B59505B005558A4 /* Photo.m in Sources */,
 				6D6C4F781B587623005558A4 /* PhotosViewController.m in Sources */,
 				6D6C4F751B587623005558A4 /* AppDelegate.m in Sources */,
 				6D6C4F721B587623005558A4 /* main.m in Sources */,
@@ -424,6 +430,7 @@
 				6D6C4F911B587623005558A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D6C4F921B587623005558A4 /* Build configuration list for PBXNativeTarget "PhotoramaTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +439,7 @@
 				6D6C4F941B587623005558A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
