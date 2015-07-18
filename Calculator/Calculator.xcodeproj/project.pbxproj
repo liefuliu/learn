@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D48D67F1B5ACAAD00E1FFEF /* SimpleEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D48D67E1B5ACAAD00E1FFEF /* SimpleEvaluator.m */; };
+		6D48D6811B5AF5E700E1FFEF /* SimpleEvaluatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D48D6801B5AF5E700E1FFEF /* SimpleEvaluatorTest.m */; };
 		6D7F7B121B59DD3A00BA547B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F7B111B59DD3A00BA547B /* main.m */; };
 		6D7F7B151B59DD3A00BA547B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F7B141B59DD3A00BA547B /* AppDelegate.m */; };
 		6D7F7B181B59DD3A00BA547B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F7B171B59DD3A00BA547B /* ViewController.m */; };
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D48D67D1B5ACAAD00E1FFEF /* SimpleEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleEvaluator.h; sourceTree = "<group>"; };
+		6D48D67E1B5ACAAD00E1FFEF /* SimpleEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleEvaluator.m; sourceTree = "<group>"; };
+		6D48D6801B5AF5E700E1FFEF /* SimpleEvaluatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleEvaluatorTest.m; sourceTree = "<group>"; };
 		6D7F7B0C1B59DD3A00BA547B /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7F7B101B59DD3A00BA547B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D7F7B111B59DD3A00BA547B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +94,8 @@
 				6D7F7B1C1B59DD3A00BA547B /* Images.xcassets */,
 				6D7F7B1E1B59DD3A00BA547B /* LaunchScreen.xib */,
 				6D7F7B0F1B59DD3A00BA547B /* Supporting Files */,
+				6D48D67D1B5ACAAD00E1FFEF /* SimpleEvaluator.h */,
+				6D48D67E1B5ACAAD00E1FFEF /* SimpleEvaluator.m */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -107,6 +114,7 @@
 			children = (
 				6D7F7B2B1B59DD3A00BA547B /* CalculatorTests.m */,
 				6D7F7B291B59DD3A00BA547B /* Supporting Files */,
+				6D48D6801B5AF5E700E1FFEF /* SimpleEvaluatorTest.m */,
 			);
 			path = CalculatorTests;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D7F7B181B59DD3A00BA547B /* ViewController.m in Sources */,
+				6D48D67F1B5ACAAD00E1FFEF /* SimpleEvaluator.m in Sources */,
 				6D7F7B151B59DD3A00BA547B /* AppDelegate.m in Sources */,
 				6D7F7B121B59DD3A00BA547B /* main.m in Sources */,
 			);
@@ -230,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D7F7B2C1B59DD3A00BA547B /* CalculatorTests.m in Sources */,
+				6D48D6811B5AF5E700E1FFEF /* SimpleEvaluatorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +422,7 @@
 				6D7F7B311B59DD3A00BA547B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D7F7B321B59DD3A00BA547B /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +431,7 @@
 				6D7F7B341B59DD3A00BA547B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
