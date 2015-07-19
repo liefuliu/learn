@@ -19,7 +19,6 @@
     [NSPredicate predicateWithFormat:@"SELF MATCHES %@", decimalRegex];
     
     if ([regexPredicate evaluateWithObject: stringValue]){
-        //Matches
         result = true;
     }
     
@@ -42,27 +41,6 @@
     int leftBracketsStartAt = -10;
     int currentIndex = 0;
     for (NSString* input in inputArray) {
-        /*
-        if ([input isEqualToString:@"+"] ||
-            [input isEqualToString:@"-"]) {
-            if (leftBrackets > 0) {
-                continue;
-            } else {
-                // Found the first + or -, compute the left and right
-                
-                
-                
-            }
-        } else if ([input isEqualToString:@"*"] ||
-                   [input isEqualToString:@"/"] ||
-                   [input isEqualToString:@"%"]) {
-            if (leftBrackets > 0) {
-                continue;
-            }
-            
-            
-        } else
-        */
         if ([input isEqualToString:@"("]){
             if (leftBrackets == 0) {
                 leftBracketsStartAt = currentIndex;
@@ -132,10 +110,10 @@
             if ([left containsString:@"."] || [right containsString:@"."]) {
                 if ([input isEqualToString:@"+"]) {
                     double result = [left doubleValue] + [right doubleValue];
-                    return [NSString stringWithFormat:@"%f", result];
+                    return [NSString stringWithFormat:@"%g", result];
                 } else {
                     double result = [left doubleValue] - [right doubleValue];
-                    return [NSString stringWithFormat:@"%f", result];
+                    return [NSString stringWithFormat:@"%g", result];
                 }
             } else {
                 if ([input isEqualToString:@"+"]) {
@@ -173,13 +151,13 @@
             if ([left containsString:@"."] || [right containsString:@"."]) {
                 if ([input isEqualToString:@"*"]) {
                     double result = [left doubleValue] * [right doubleValue];
-                    return [NSString stringWithFormat:@"%f", result];
+                    return [NSString stringWithFormat:@"%g", result];
                 } else {
                     if ([right doubleValue] == 0.0) {
                         return nil;
                     }
                     double result = [left doubleValue] / [right doubleValue];
-                    return [NSString stringWithFormat:@"%f", result];
+                    return [NSString stringWithFormat:@"%g", result];
                 }
             } else {
                 if ([input isEqualToString:@"*"]) {
@@ -189,8 +167,14 @@
                     if ([right intValue] == 0) {
                         return nil;
                     }
-                    int result = [left intValue] / [right intValue];
-                    return [NSString stringWithFormat:@"%d", result];
+                    if ([left intValue] % [right intValue] == 0) {
+                        int result = [left intValue] / [right intValue];
+                        return [NSString stringWithFormat:@"%d", result];
+                    }
+                    else {
+                        double result = [left intValue] * 1.0 / [right intValue];
+                        return [NSString stringWithFormat:@"%g", result];
+                    }
                 }
             }
         }

@@ -166,6 +166,18 @@
     result = [SimpleEvaluator evaluateString:input];
     
     XCTAssert([result isEqualToString:@"1"]);
+    
+    input = @[@"10", @"/", @"4"];
+    result = [SimpleEvaluator evaluateString:input];
+    XCTAssert([result isEqualToString:@"2.5"]);
+    
+    input = @[@"10", @"/", @"4", @"+", @"1"];
+    result = [SimpleEvaluator evaluateString:input];
+    XCTAssert([result isEqualToString:@"3.5"]);
+    
+    input = @[@"10", @"/", @"4", @"-", @"6", @"/", @"4"];
+    result = [SimpleEvaluator evaluateString:input];
+    XCTAssert([result isEqualToString:@"1"]);
 }
 
 // Failed cases
