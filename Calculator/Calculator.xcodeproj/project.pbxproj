@@ -16,6 +16,8 @@
 		6D7F7B1D1B59DD3A00BA547B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F7B1C1B59DD3A00BA547B /* Images.xcassets */; };
 		6D7F7B201B59DD3A00BA547B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F7B1E1B59DD3A00BA547B /* LaunchScreen.xib */; };
 		6D7F7B2C1B59DD3A00BA547B /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F7B2B1B59DD3A00BA547B /* CalculatorTests.m */; };
+		6DD198231B5B25D300F220BC /* KeyCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD198221B5B25D300F220BC /* KeyCache.m */; };
+		6DD198251B5B62F800F220BC /* KeyCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD198241B5B62F800F220BC /* KeyCacheTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,9 @@
 		6D7F7B251B59DD3A00BA547B /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7F7B2A1B59DD3A00BA547B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D7F7B2B1B59DD3A00BA547B /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
+		6DD198211B5B25D300F220BC /* KeyCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyCache.h; sourceTree = "<group>"; };
+		6DD198221B5B25D300F220BC /* KeyCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyCache.m; sourceTree = "<group>"; };
+		6DD198241B5B62F800F220BC /* KeyCacheTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyCacheTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +101,8 @@
 				6D7F7B0F1B59DD3A00BA547B /* Supporting Files */,
 				6D48D67D1B5ACAAD00E1FFEF /* SimpleEvaluator.h */,
 				6D48D67E1B5ACAAD00E1FFEF /* SimpleEvaluator.m */,
+				6DD198211B5B25D300F220BC /* KeyCache.h */,
+				6DD198221B5B25D300F220BC /* KeyCache.m */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				6D7F7B2B1B59DD3A00BA547B /* CalculatorTests.m */,
+				6DD198241B5B62F800F220BC /* KeyCacheTest.m */,
 				6D7F7B291B59DD3A00BA547B /* Supporting Files */,
 				6D48D6801B5AF5E700E1FFEF /* SimpleEvaluatorTest.m */,
 			);
@@ -231,6 +239,7 @@
 				6D48D67F1B5ACAAD00E1FFEF /* SimpleEvaluator.m in Sources */,
 				6D7F7B151B59DD3A00BA547B /* AppDelegate.m in Sources */,
 				6D7F7B121B59DD3A00BA547B /* main.m in Sources */,
+				6DD198231B5B25D300F220BC /* KeyCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D7F7B2C1B59DD3A00BA547B /* CalculatorTests.m in Sources */,
+				6DD198251B5B62F800F220BC /* KeyCacheTest.m in Sources */,
 				6D48D6811B5AF5E700E1FFEF /* SimpleEvaluatorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +366,7 @@
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -366,6 +377,7 @@
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

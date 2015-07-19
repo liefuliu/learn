@@ -86,6 +86,15 @@
 
 }
 
+
+- (void) testEvaluationBracketSimpleAdd {
+    NSArray* input = @[@"(", @"3", @"+", @"6", @")"];
+    NSString* result = [SimpleEvaluator evaluateString:input];
+    
+    XCTAssert([result isEqualToString:@"9"]);
+    
+}
+
 - (void) testEvaluationBracketWithAddSub {
     NSArray* input = @[@"1", @"-", @"(", @"3", @"+", @"6", @")", ];
     NSString* result = [SimpleEvaluator evaluateString:input];
