@@ -86,7 +86,7 @@
         return nil;
     }
     
-    // Now there is only +-*/%
+    // Now there are only +-*/.
     for (int i = inputArray.count - 1; i >= 0; i--) {
         NSString* input = inputArray[i];
         
@@ -107,7 +107,7 @@
                 return right;
             }
             
-            if ([left containsString:@"."] || [right containsString:@"."]) {
+            if ([left rangeOfString:@"."].length != 0 || [right rangeOfString:@"."].length != 0) {
                 if ([input isEqualToString:@"+"]) {
                     double result = [left doubleValue] + [right doubleValue];
                     return [NSString stringWithFormat:@"%g", result];
@@ -127,7 +127,7 @@
         }
     }
     
-    // Now there is only */
+    // Now there are only * and /
     for (int i = inputArray.count - 1; i >= 0; i--) {
         NSString* input = inputArray[i];
         
@@ -148,7 +148,7 @@
                 return right;
             }
             
-            if ([left containsString:@"."] || [right containsString:@"."]) {
+            if ([left rangeOfString:@"."].length != 0 || [right rangeOfString:@"."].length != 0) {
                 if ([input isEqualToString:@"*"]) {
                     double result = [left doubleValue] * [right doubleValue];
                     return [NSString stringWithFormat:@"%g", result];
