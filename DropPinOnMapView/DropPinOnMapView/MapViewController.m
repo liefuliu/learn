@@ -10,6 +10,7 @@
 
 #import "MapViewController.h"
 #import "CCLocationManager.h"
+#import "LFAnnotation.h"
 
 @interface MapViewController () <CLLocationManagerDelegate> {
     CLLocationManager *locationmanager;
@@ -29,6 +30,7 @@
     
     [self performSelector:@selector(getLocation)];
     NSLog(@"viewDidLoad finished");
+    
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
@@ -69,6 +71,21 @@
             // Show me the location
             [self.myMapView setRegion:zoomRegion animated:YES];
             [self.myMapView setShowsUserLocation:YES];
+            
+            // Annotiataion
+            // 1. create a coordinate for use with annotation
+            CLLocationCoordinate2D wimbLocation;
+            wimbLocation.latitude = locationCorrrdinate.latitude + 0.001f;
+            wimbLocation.longitude = locationCorrrdinate.longitude + 0.001f;
+            
+            LFAnnotation *myAnnotation = [LFAnnotation alloc];
+            
+            myAnnotation.coordinate = wimbLocation;
+            myAnnotation.title = @"New annotation title";
+            myAnnotation.subtitle = @"New annotation sub title";
+            
+            [self.myMapView addAnnotation:myAnnotation];
+
             
         }];
     }

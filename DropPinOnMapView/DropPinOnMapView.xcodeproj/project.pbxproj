@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D013EAF1B77E1CA006D13B9 /* LFAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D013EAE1B77E1CA006D13B9 /* LFAnnotation.m */; };
 		6D08612E1B6EE52200BC5910 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D08612D1B6EE52200BC5910 /* main.m */; };
 		6D0861311B6EE52200BC5910 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0861301B6EE52200BC5910 /* AppDelegate.m */; };
 		6D0861341B6EE52200BC5910 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0861331B6EE52200BC5910 /* ViewController.m */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D013EAD1B77E1CA006D13B9 /* LFAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFAnnotation.h; sourceTree = "<group>"; };
+		6D013EAE1B77E1CA006D13B9 /* LFAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFAnnotation.m; sourceTree = "<group>"; };
 		6D0861281B6EE52200BC5910 /* DropPinOnMapView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropPinOnMapView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D08612C1B6EE52200BC5910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D08612D1B6EE52200BC5910 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				6D08612B1B6EE52200BC5910 /* Supporting Files */,
 				6D0861511B6EE59C00BC5910 /* MapViewController.h */,
 				6D0861521B6EE59C00BC5910 /* MapViewController.m */,
+				6D013EAD1B77E1CA006D13B9 /* LFAnnotation.h */,
+				6D013EAE1B77E1CA006D13B9 /* LFAnnotation.m */,
 				6D0861531B6EE59C00BC5910 /* MapViewController.xib */,
 			);
 			path = DropPinOnMapView;
@@ -250,6 +255,7 @@
 				6D0861341B6EE52200BC5910 /* ViewController.m in Sources */,
 				6D0861311B6EE52200BC5910 /* AppDelegate.m in Sources */,
 				6D08612E1B6EE52200BC5910 /* main.m in Sources */,
+				6D013EAF1B77E1CA006D13B9 /* LFAnnotation.m in Sources */,
 				6D08615F1B76C8FB00BC5910 /* CLLocation+YCLocation.m in Sources */,
 				6D0861541B6EE59C00BC5910 /* MapViewController.m in Sources */,
 			);
@@ -446,6 +452,7 @@
 				6D08614D1B6EE52200BC5910 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D08614E1B6EE52200BC5910 /* Build configuration list for PBXNativeTarget "DropPinOnMapViewTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +461,7 @@
 				6D0861501B6EE52200BC5910 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
