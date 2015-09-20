@@ -1,0 +1,6 @@
+message ClassInfo {
+  optional string project = 1;
+  optional int32 price = 2;
+  optional string teacher = 3;
+optional int32 id = 4;
+}
